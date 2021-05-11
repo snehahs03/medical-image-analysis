@@ -73,3 +73,10 @@ Y_test = Y_test[s]
 
 Y_train = to_categorical(Y_train, num_classes= 3)
 Y_test = to_categorical(Y_test, num_classes= 3)
+
+#train and evaluation split
+x_train, x_val, y_train, y_val = train_test_split(
+    X_train, Y_train, 
+    test_size=0.2, 
+    random_state=11
+)
